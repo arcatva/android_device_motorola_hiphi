@@ -16,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/motorola/hiphi/hiphi-vendor.mk)
+# $(call inherit-product, vendor/motorola/hiphi/hiphi-vendor.mk)
 
 # AAPT
 # Device uses high-density artwork where available
@@ -24,11 +24,7 @@ PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # API
-BOARD_API_LEVEL := 31
-BOARD_SHIPPING_API_LEVEL := 31
-PRODUCT_SHIPPING_API_LEVEL := 31
-PRODUCT_TARGET_VNDK_VERSION := 31
-PRODUCT_EXTRA_VNDK_VERSIONS := 31
+
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
@@ -76,7 +72,7 @@ PRODUCT_PACKAGES += \
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PREBUILT_PATH)/kernel/dtb.img:dtb.img
+    $(DEVICE_PREBUILT_PATH)/dtb.img:dtb.img
 
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -101,10 +97,6 @@ PRODUCT_PACKAGES += \
     SettingsProviderOverlayHiphi \
     SettingsOverlayHiphic
 
-# Moto hardware
-PRODUCT_PACKAGES += \
-    MotoActions \
-    MotoCommonOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
