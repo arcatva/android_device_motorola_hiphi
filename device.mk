@@ -16,7 +16,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_ven
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-# $(call inherit-product, vendor/motorola/hiphi/hiphi-vendor.mk)
+$(call inherit-product, vendor/motorola/hiphi/hiphi-vendor.mk)
 
 # AAPT
 # Device uses high-density artwork where available
